@@ -26,6 +26,7 @@ function analysisOfAnswers2(dataMatrix, questions, metaData) {
     let noQuestions = questionsSet.length
     let noOfResponses = dataMatrix.length - 1; // -1 here is so that the matrix header is not included in count
     
+    //let dataStartColumn = metaData.collectsEmail ? 3 : 2
     let dataStartColumn = metaData.collectsEmail ? 3 : 2
     let questionCounter = 0
     let answersStartColumn = metaData.collectsEmail ? 3 : 2
@@ -33,6 +34,7 @@ function analysisOfAnswers2(dataMatrix, questions, metaData) {
     for (let i = 1; i < noOfResponses; i++) { // i represents the row of the data
 
         for (let j = 0; j < noQuestions; j++) { // j represents the column of the question matrix
+            //console.log('Question response ',JSON.stringify(questions[j]))
             if (questionsSet[j].type == "MULTIPLE_CHOICE") {
                 //let name = metaData.collectsEmail ? dataMatrix[i][3] : dataMatrix[i][2];
                 
@@ -53,6 +55,7 @@ function analysisOfAnswers2(dataMatrix, questions, metaData) {
             else {} //console.log(`The question type is ${questionsSet[j].type} and j is ${j}`)
 
         }
+        console.log('\n\n')
     }
     questionsSet.forEach((question, index) => {
         //console.log("inside q ",question)
@@ -191,11 +194,10 @@ function totalQuizScore(questions) {
 
 function processDataMatrix(dataMatrix, questions, metaData) {
     dataMatrix[0]
-    let output = [];
-    let noQuestions = questions.length;
-    let noOfResponses = dataMatrix.length;
-    let questionCounter = 0;
-    const uploaded =  metaData.uploaded;
+    let output = []
+    let noQuestions = questions.length
+    let noOfResponses = dataMatrix.length
+    let questionCounter = 0
     //let dataStartColumn = metaData.collectsEmail ? 3 : 2
     let dataStartColumn = metaData.collectsEmail ? 3 : 2
     let answersStartColumn = metaData.collectsEmail ? 3 : 2
@@ -205,13 +207,14 @@ function processDataMatrix(dataMatrix, questions, metaData) {
         itemResponse.responses = []
         for (let j = dataStartColumn; j < noQuestions; j++) { // j < dataMatrix[i].length // j represents the column of the 2x2 matrix
             itemResponse.responseNumber = i;//+ 1;
-            itemResponse.score = uploaded === 'google' ? (metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1]) : (metaData.collectsEmail ? dataMatrix[i][4] : dataMatrix[i][3]);
+            itemResponse.score = metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1];
             itemResponse.percentage =
-                itemResponse.name = uploaded === 'google' ? (metaData.collectsEmail ? dataMatrix[i][3] : dataMatrix[i][2]) : (metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1]);
+                itemResponse.name = metaData.collectsEmail ? dataMatrix[i][3] : dataMatrix[i][2];
             itemResponse.rank = i;
             itemResponse.responses.push({
                 title: dataMatrix[0][j],
-                response: dataMatrix[i][j]
+                response: dataMatrix[i][j],
+                //choices: questions[questionCounter].choices ? questions[questionCounter].choices : null //attaching question choices to response
             })
             questionCounter++
         }
