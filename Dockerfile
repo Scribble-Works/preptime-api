@@ -19,4 +19,4 @@ COPY . .
 RUN ls -a
 
 # Run the api service on container startup.
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "dev" ]
