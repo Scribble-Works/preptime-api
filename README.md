@@ -15,22 +15,37 @@ To get the project started, there are some tools you need to install on your loc
 For users on Mac, the best way to install git is by using [Homebrew](https://brew.sh/). To install Homebrew, open your shell and run the following command:
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 After the command is done running, check if Homebrew is successfully installed by running:
 
 ```
-brew --version
+$ brew --version
 ```
 
 If Homebrew is successfully installed, the version will be logged to the screen. Now proceed to install git using Homebrew with the following command:
 
 ```
-brew install git
+$ brew install git
 ```
 
-For users on Windows, download the [latest version](https://git-scm.com/downloads) of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system.
+For users on Windows, download the [latest version](https://git-scm.com/downloads) of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system. Once installed, select Launch the Git Bash, then click on finish.
+
+* Install Node.js
+
+For users on Mac, install Node.js with Homebrew using the following command:
+
+```
+$ brew update
+$ brew install node
+```
+
+For users on Windows, download and install the [Node.js](https://nodejs.org/en/download/) .msi installer. Follow the guide on the installer and node.js should be installed successfully on your local machine. After that, check for a successful installation by logging the version of Node.js with:
+
+```
+$ node --version
+```
 
 ### Installing
 
