@@ -4,15 +4,33 @@ Node.js/Express app that serves as a backend for the preptime analyzer web appli
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This repository contains the resources and instructions that will get you a copy of the project up and running on your local machine for development and testing purposes, and also with notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To get the project started, there are some tools you need to install on your local machine. The list of tools you need to install have been provided with a guide on how to install these tools.
+
+* Install git
+
+For users on Mac, the best way to install git is by using [Homebrew](https://brew.sh/). To install Homebrew, open your shell and run the following command:
 
 ```
-Give examples
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+After the command is done running, check if Homebrew is successfully installed by running:
+
+```
+brew --version
+```
+
+If Homebrew is successfully installed, the version will be logged to the screen. Now proceed to install git using Homebrew with the following command:
+
+```
+brew install git
+```
+
+For users on Windows, download the [latest version](https://git-scm.com/downloads) of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system.
 
 ### Installing
 
