@@ -1,9 +1,6 @@
-# preptime-api
+# Preptime API
+
 Node.js/Express app that serves as a backend for the preptime analyzer web application.
-
-# Project Title
-
-One Paragraph of project description goes here
 
 ## Getting Started
 
