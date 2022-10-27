@@ -30,7 +30,11 @@ If Homebrew is successfully installed, the version will be logged to the screen.
 $ brew install git
 ```
 
-For users on Windows, download the [latest version](https://git-scm.com/downloads) of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system. Once installed, select Launch the Git Bash, then click on finish.
+For users on Windows, download the [latest version](https://git-scm.com/downloads) of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system. Once installed, select Launch the Git Bash, then click on finish. After that, check for a successful installation by opening your terminal and logging the version of git with:
+
+```
+$ git --version
+```
 
 * Install Node.js
 
@@ -46,6 +50,49 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 ```
 $ node --version
 ```
+
+* Install MongoDB
+
+The project uses mongodb as the database for storing all data and other relevant informations. The community edition of mongodb is the prefered edition used in this project. For users on Mac, we can install mongodb using the Homebrew package manager as we did for the previous installations.
+
+Installing Mongodb on Mac:
+
+Tap the MongoDB Homebrew Tap to download the official Homebrew formula for MongoDB and the Database Tools, by running the following command in your macOS Terminal:
+
+```
+$ brew tap mongodb/brew
+```
+
+Update Homebrew and all existing formulae:
+
+```
+$ brew update
+```
+
+To install MongoDB, run the following command in your macOS Terminal application:
+
+```
+$ brew install mongodb-community@6.0
+```
+
+To run MongoDB (i.e. the mongod process) as a macOS service, run:
+
+```
+$ brew services start mongodb-community@6.0
+```
+
+To run MongoDB (i.e. the mongod process) manually as a background process, run:
+
+```
+$ mongod --config /usr/local/etc/mongod.conf --fork   //for MacOS running intel processor
+$ mongod --config /opt/homebrew/etc/mongod.conf --fork   // for MacOS running Apple M1 processor
+```
+
+Installation on Windows:
+
+Install MongoDB Community Edition on Windows using the default installation wizard. Download the MongoDB Community .msi installer from the following
+link: [MongoDB Download Center](https://www.mongodb.com/try/download/community?tck=docs_server). You can also follow the [documentation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) for a step by step guide on how to install MongoDB using the .msi installer
+on Windows. The .msi installer does not include mongosh. Follow the [mongosh installation instructions](https://www.mongodb.com/docs/mongodb-shell/install/) to download and install the shell separately.
 
 ### Installing
 
