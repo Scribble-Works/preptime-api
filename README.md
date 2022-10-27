@@ -94,7 +94,7 @@ Install MongoDB Community Edition on Windows using the default installation wiza
 link: [MongoDB Download Center](https://www.mongodb.com/try/download/community?tck=docs_server). You can also follow the [documentation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) for a step by step guide on how to install MongoDB using the .msi installer
 on Windows. The .msi installer does not include mongosh. Follow the [mongosh installation instructions](https://www.mongodb.com/docs/mongodb-shell/install/) to download and install the shell separately.
 
-### Installing
+### Installation
 
 Now that you have installed the tools required to start the project locally, we provide a step by step series of examples that tell you how to get a development environment running. Before you can get the dev environment running, you need to download the project resources (files) from the github repository using git (which you installed earlier). To do this, you simply need to run the following command:
 
@@ -106,7 +106,7 @@ After git is done cloning the project repository, move into the project folder a
 
 ```
 $ cd preptime-api
-$ npm install yarn    // project uses yarn
+$ npm install -g yarn    // project uses yarn
 $ yarn install        // or simply "yarn"
 ```
 
