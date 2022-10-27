@@ -123,49 +123,15 @@ Now start the development server with the following command:
 $ yarn dev
 ```
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The original project is deployed and hosted on Amazon Web Service. But developers are encouraged to deploy or host it on any other service they prefer. The recommended method for building this project for production is by using Docker and docker-compose.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Express](https://expressjs.com/) - The backend framework used
+* [MongoDB](https://www.mongodb.com/docs/manual/tutorial/getting-started/) - Database Management
+* [Yarn](https://yarnpkg.com/) - Dependencies and package management
 
 ## Contributing
 
@@ -173,20 +139,14 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Scribble-Works/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Scribble Works** - *Initial work* - [Scribble Works](https://github.com/Scribble-Works)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
