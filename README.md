@@ -96,7 +96,32 @@ on Windows. The .msi installer does not include mongosh. Follow the [mongosh ins
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Now that you have installed the tools required to start the project locally, we provide a step by step series of examples that tell you how to get a development environment running. Before you can get the dev environment running, you need to download the project resources (files) from the github repository using git (which you installed earlier). To do this, you simply need to run the following command:
+
+```
+$ git clone https://github.com/Scribble-Works/preptime-api.git
+```
+
+After git is done cloning the project repository, move into the project folder and install the dependencies:
+
+```
+$ cd preptime-api
+$ npm install yarn    // project uses yarn
+$ yarn install        // or simply "yarn"
+```
+
+You will then have to create your environment variables in a .env file with the following variables:
+
+* PORT - port on which the server runs on. Default is port 5000.
+* DB_HOST - database hostname. Default is mongo_db (should be the same as the MongoDB service name in the docker-compose file)
+* DB_PORT - database port. Defaults to 27017.
+* DB_NAME - name of your database.
+
+Now start the development server with the following command:
+
+```
+$ yarn dev
+```
 
 Say what the step will be
 
