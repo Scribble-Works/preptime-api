@@ -10,7 +10,7 @@ This repository contains the resources and instructions that will get you a copy
 
 To get the project started, there are some tools you need to install on your local machine. The list of tools you need to install have been provided with a guide on how to install these tools.
 
-### `Install git`
+#### `Install git`
 
 For users on Mac, the best way to install git is by using [Homebrew](https://brew.sh/). To install Homebrew, open your shell and run the following command:
 
@@ -36,7 +36,7 @@ For users on Windows, download the [latest version](https://git-scm.com/download
 $ git --version
 ```
 
-### `Install Node.js`
+#### `Install Node.js`
 
 For users on Mac, install Node.js with Homebrew using the following command:
 
@@ -51,7 +51,7 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 $ node --version
 ```
 
-### `Install MongoDB`
+#### `Install MongoDB`
 
 The project uses mongodb as the database for storing all data and other relevant informations. The community edition of mongodb is the prefered edition used in this project. For users on Mac, we can install mongodb using the Homebrew package manager as we did for the previous installations.
 
