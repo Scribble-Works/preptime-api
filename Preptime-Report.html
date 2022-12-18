@@ -1,0 +1,261 @@
+
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+            <style>
+            .report,
+            .report-content {
+                width: 100%;
+                height: max-content;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+
+            .summary-content {
+                width: min(100% - 20px, 1100px);
+                margin: 0 auto;
+            }
+            
+            .meta {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 80px;
+            }
+            
+            .report .school,
+            .report .subject {
+                font-size: 40px;
+            }
+            
+            .meta-txt {
+                font-size: 18px;
+            }
+            
+            .date .fas {
+                margin-right: 6px;
+            }
+            
+            .max-min {
+                width: 100%;
+                height: max-content;
+                margin-block: 30px;
+            }
+            
+            .min-max-flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: min(100%, 1100px);
+                margin-inline: auto;
+            }
+            
+            .minmax-blk {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                width: min(100%, 550px);
+                align-items: center;
+                border-radius: 5px;
+                box-shadow: 5px 5px 15px rgba(0,0,0,.1);
+            }
+            
+            .max {
+                background: #385F73;
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+            
+            .min {
+                background: #ff3f5f;
+            }
+            
+            .minmax-txt {
+                margin-right: 25px;
+            }
+            
+            .minmax-txt h4 {
+                color: #fff;
+                font-size: 18px;
+            }
+            
+            .minmax-txt p {
+                color: hsla(0,0%,100%,.7);
+            }
+            
+            .score {
+                font-weight: bold;
+                font-size: 50px;
+                color: #fff;
+            }
+            
+            .sect-title {
+                width: 100%;
+                height: max-content;
+                margin-block: 50px;
+            }
+            
+            .sect-title h1 {
+                font-weight: bold;
+                font-size: 22px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            
+            .missed-ques {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                color: #fff;
+                background: #ff3f5f;
+                border-radius: 5px;
+                box-shadow: 5px 5px 15px rgba(0,0,0,.1);
+                margin-bottom: 15px;
+                margin-inline: auto;
+                max-width: 800px;
+            }
+            
+            .pct {
+                font-size: 18px;
+                align-self: flex-end;
+                white-space: nowrap;
+            }
+            
+            .foot-note {
+                width: 100%;
+                height: max-content;
+                padding: 15px 0;
+                background: #e2e2e2;
+            }
+            
+            .foot-content {
+                width: min(100% - 20px, 1000px);
+                margin-inline: auto;
+                font-size: 15px;
+                text-align: center;
+            }
+            
+            .info {
+                width: min(80%, 500px);
+                margin-inline: auto;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                margin-bottom: 25px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                background-color: rgb(229, 246, 253);
+                color: rgb(1, 67, 97);
+            }
+            
+            .info .fas {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+            
+            .banner {
+                width: min(100% - 20px, 1100px);
+                margin: 0 auto 150px;
+                border: 1px solid rgba(0,0,0,.2);
+            }
+            
+            .banner-content {
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .banner .img-wrapper {
+                width: min(100%, 100px);
+                height: 100px;
+                align-self: center;
+            }
+            
+            .banner .img-wrapper img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .banner-text {
+                text-align: right;
+                font-weight: bold;
+            }
+            
+            .banner-text h1,
+            .banner-text h3 {
+                text-transform: uppercase;
+            }
+
+            .banner-text h1 {
+                font-size: 38px;
+            }
+        
+            .banner-text h3 {
+                font-size: 24px;
+            }
+
+            .main-tb-container {
+                width: 100%;
+                height: max-content;
+                margin-inline: auto;
+                padding: 0px 5px 0px;
+                border-radius: 8px;
+                box-shadow: 5px 5px 25px rgba(0,0,0,.1);
+            }
+            
+            .table-wrapper {
+                height: 100%;
+                width: 100%;
+                overflow-x: auto;
+                margin-bottom: 8px;
+            }
+            
+            .table {
+                height: max-content;
+                width: 100%;
+            }
+            
+            th {
+                color: #3c3c3c;
+                text-align: left;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            tr {
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                white-space: nowrap;
+            }
+            
+            .sort-ctrls {
+                display: none;
+            }
+            
+            .tb-controls {
+                display: none;
+            }
+            </style>
+        </head>
+        <body>
+            <div class="report">
+                <div class="report-content">
+                    <div id="printableDoc">
+                        <div class="banner">
+                            <div class="banner-content"><div class="img-wrapper"><img src="/static/media/PrepTime_analyser_logo.af7a3d62bd35be9a7909.png" alt="Preptime analyser logo"></div><div class="banner-text"><h1>PrepTime Analysis</h1><h3>Test Summary Report</h3><h3>Version 1.0</h3></div></div></div><div class="summary-content"><div class="meta"><h1 class="school bold">Prince Of Peace</h1><h2 class="subject bold">Course/Subject: BDT</h2><p class="meta-txt class bold">Class: Form 1</p><p class="meta-txt bold">Test Title: BDT (Home Econs) (Responses)</p><p class="meta-txt bold">Academic Year: </p><p class="meta-txt date"><i class="fas fa-calendar"></i>Nov 3, 2022</p></div><div class="max-min"><div class="min-max-flex"><div class="minmax-blk max"><div class="minmax-txt"><h4>MAXIMUM MARK</h4><p class="bold">The maximum mark was scored by Sam Lyza Kukua Kakraba</p></div><h2 class="score">40 </h2></div><div class="minmax-blk min"><div class="minmax-txt"><h4>MINIMUM MARK</h4><p class="bold">The minimum mark was scored by H</p></div><h2 class="score">0 </h2></div></div></div><div class="sect-title"><h1>Analysis of Answers</h1><div class="main-tb-container"><div class="table-wrapper"><table class="table" id="table-aa"><thead><tr><th data-sort="" id="col-0"><span>Q-No</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-1"><span>Answer</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-2"><span>A</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-3"><span>B</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-4"><span>C</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-5"><span>D</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-6"><span>U</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-7"><span>Total</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-8"><span>Non Distractors</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-9"><span>Item Difficulty (%)</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-10"><span>Discrimination</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th></tr></thead><tbody><tr><td class="tb-cell">1</td><td class="tb-cell">B</td><td class="tb-cell">10</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">20</td><td class="tb-cell">30</td><td class="tb-cell">BCD</td><td class="tb-cell">0</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">2</td><td class="tb-cell">D</td><td class="tb-cell">4</td><td class="tb-cell">5</td><td class="tb-cell">0</td><td class="tb-cell">19</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">C</td><td class="tb-cell">63.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">3</td><td class="tb-cell">A</td><td class="tb-cell">18</td><td class="tb-cell">6</td><td class="tb-cell">4</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">D</td><td class="tb-cell">60.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">4</td><td class="tb-cell">C</td><td class="tb-cell">1</td><td class="tb-cell">0</td><td class="tb-cell">27</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">BD</td><td class="tb-cell">90.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">5</td><td class="tb-cell">B</td><td class="tb-cell">1</td><td class="tb-cell">22</td><td class="tb-cell">2</td><td class="tb-cell">3</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">73.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">6</td><td class="tb-cell">A</td><td class="tb-cell">12</td><td class="tb-cell">6</td><td class="tb-cell">1</td><td class="tb-cell">9</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">40.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">7</td><td class="tb-cell">A</td><td class="tb-cell">25</td><td class="tb-cell">1</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">C</td><td class="tb-cell">83.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">8</td><td class="tb-cell">D</td><td class="tb-cell">14</td><td class="tb-cell">1</td><td class="tb-cell">3</td><td class="tb-cell">10</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">33.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">9</td><td class="tb-cell">B</td><td class="tb-cell">3</td><td class="tb-cell">20</td><td class="tb-cell">1</td><td class="tb-cell">4</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">66.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">10</td><td class="tb-cell">D</td><td class="tb-cell">0</td><td class="tb-cell">7</td><td class="tb-cell">0</td><td class="tb-cell">21</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">AC</td><td class="tb-cell">70.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">11</td><td class="tb-cell">C</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">28</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">ABD</td><td class="tb-cell">93.33</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">12</td><td class="tb-cell">B</td><td class="tb-cell">3</td><td class="tb-cell">18</td><td class="tb-cell">2</td><td class="tb-cell">4</td><td class="tb-cell">3</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">60.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">13</td><td class="tb-cell">B</td><td class="tb-cell">0</td><td class="tb-cell">24</td><td class="tb-cell">1</td><td class="tb-cell">3</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">A</td><td class="tb-cell">80.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">14</td><td class="tb-cell">A</td><td class="tb-cell">9</td><td class="tb-cell">9</td><td class="tb-cell">1</td><td class="tb-cell">9</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">30.00</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">15</td><td class="tb-cell">D</td><td class="tb-cell">3</td><td class="tb-cell">0</td><td class="tb-cell">1</td><td class="tb-cell">24</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">B</td><td class="tb-cell">80.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">16</td><td class="tb-cell">A</td><td class="tb-cell">15</td><td class="tb-cell">3</td><td class="tb-cell">3</td><td class="tb-cell">7</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">50.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">17</td><td class="tb-cell">B</td><td class="tb-cell">0</td><td class="tb-cell">28</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">ACD</td><td class="tb-cell">93.33</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">18</td><td class="tb-cell">C</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">28</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">ABD</td><td class="tb-cell">93.33</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">19</td><td class="tb-cell">A</td><td class="tb-cell">20</td><td class="tb-cell">1</td><td class="tb-cell">1</td><td class="tb-cell">6</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">66.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">20</td><td class="tb-cell">C</td><td class="tb-cell">5</td><td class="tb-cell">1</td><td class="tb-cell">21</td><td class="tb-cell">1</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">70.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">21</td><td class="tb-cell">B</td><td class="tb-cell">6</td><td class="tb-cell">8</td><td class="tb-cell">9</td><td class="tb-cell">5</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">26.67</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">22</td><td class="tb-cell">B</td><td class="tb-cell">0</td><td class="tb-cell">21</td><td class="tb-cell">6</td><td class="tb-cell">1</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">A</td><td class="tb-cell">70.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">23</td><td class="tb-cell">D</td><td class="tb-cell">4</td><td class="tb-cell">2</td><td class="tb-cell">5</td><td class="tb-cell">17</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">56.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">24</td><td class="tb-cell">B</td><td class="tb-cell">8</td><td class="tb-cell">12</td><td class="tb-cell">3</td><td class="tb-cell">5</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">40.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">25</td><td class="tb-cell">D</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">9</td><td class="tb-cell">17</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">A</td><td class="tb-cell">56.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">26</td><td class="tb-cell">D</td><td class="tb-cell">5</td><td class="tb-cell">2</td><td class="tb-cell">3</td><td class="tb-cell">18</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">60.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">27</td><td class="tb-cell">B</td><td class="tb-cell">0</td><td class="tb-cell">27</td><td class="tb-cell">1</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">AD</td><td class="tb-cell">90.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">28</td><td class="tb-cell">A</td><td class="tb-cell">28</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">BCD</td><td class="tb-cell">93.33</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">29</td><td class="tb-cell">A</td><td class="tb-cell">26</td><td class="tb-cell">1</td><td class="tb-cell">1</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">D</td><td class="tb-cell">86.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">30</td><td class="tb-cell">A</td><td class="tb-cell">22</td><td class="tb-cell">3</td><td class="tb-cell">3</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">D</td><td class="tb-cell">73.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">31</td><td class="tb-cell">B</td><td class="tb-cell">1</td><td class="tb-cell">27</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">CD</td><td class="tb-cell">90.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">32</td><td class="tb-cell">D</td><td class="tb-cell">1</td><td class="tb-cell">1</td><td class="tb-cell">20</td><td class="tb-cell">6</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">20.00</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">33</td><td class="tb-cell">A</td><td class="tb-cell">23</td><td class="tb-cell">2</td><td class="tb-cell">2</td><td class="tb-cell">1</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">76.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">34</td><td class="tb-cell">D</td><td class="tb-cell">3</td><td class="tb-cell">1</td><td class="tb-cell">0</td><td class="tb-cell">24</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">C</td><td class="tb-cell">80.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">35</td><td class="tb-cell">D</td><td class="tb-cell">6</td><td class="tb-cell">2</td><td class="tb-cell">5</td><td class="tb-cell">14</td><td class="tb-cell">3</td><td class="tb-cell">30</td><td class="tb-cell"></td><td class="tb-cell">46.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">36</td><td class="tb-cell">D</td><td class="tb-cell">0</td><td class="tb-cell">3</td><td class="tb-cell">7</td><td class="tb-cell">18</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">A</td><td class="tb-cell">60.00</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">37</td><td class="tb-cell">B</td><td class="tb-cell">0</td><td class="tb-cell">19</td><td class="tb-cell">8</td><td class="tb-cell">0</td><td class="tb-cell">3</td><td class="tb-cell">30</td><td class="tb-cell">AD</td><td class="tb-cell">63.33</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">38</td><td class="tb-cell">C</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">26</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">AD</td><td class="tb-cell">86.67</td><td class="tb-cell">Good</td></tr><tr><td class="tb-cell">39</td><td class="tb-cell">C</td><td class="tb-cell">0</td><td class="tb-cell">0</td><td class="tb-cell">28</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">ABD</td><td class="tb-cell">93.33</td><td class="tb-cell">Check</td></tr><tr><td class="tb-cell">40</td><td class="tb-cell">C</td><td class="tb-cell">2</td><td class="tb-cell">0</td><td class="tb-cell">26</td><td class="tb-cell">0</td><td class="tb-cell">2</td><td class="tb-cell">30</td><td class="tb-cell">BD</td><td class="tb-cell">86.67</td><td class="tb-cell">Good</td></tr></tbody></table></div></div></div><div class="sect-title" id="score-summary"><h1>Summary of Scores</h1><div class="main-tb-container"><div class="table-wrapper"><table class="table" id="table-sos"><thead><tr><th data-sort="" id="col-0"><span>Name</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-1"><span>Raw Score</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-2"><span>Percentage</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th><th data-sort="" id="col-3"><span>Rank</span><span class="sort-ctrls"><i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></span></th></tr></thead><tbody><tr><td class="tb-cell">Sam Lyza Kukua Kakraba</td><td class="tb-cell">40</td><td class="tb-cell">100</td><td class="tb-cell">1</td></tr><tr><td class="tb-cell">Yakohene-Tsotovor Dziedzorm</td><td class="tb-cell">39</td><td class="tb-cell">98</td><td class="tb-cell">2</td></tr><tr><td class="tb-cell">Efua Aidoo</td><td class="tb-cell">38</td><td class="tb-cell">95</td><td class="tb-cell">3</td></tr><tr><td class="tb-cell">Nana Kwaku Adu Asomaning</td><td class="tb-cell">38</td><td class="tb-cell">95</td><td class="tb-cell">3</td></tr><tr><td class="tb-cell">Lois</td><td class="tb-cell">37</td><td class="tb-cell">93</td><td class="tb-cell">5</td></tr><tr><td class="tb-cell">Kofie Jeanette Nana Akua</td><td class="tb-cell">32</td><td class="tb-cell">80</td><td class="tb-cell">6</td></tr><tr><td class="tb-cell">Nii adam annang</td><td class="tb-cell">32</td><td class="tb-cell">80</td><td class="tb-cell">6</td></tr><tr><td class="tb-cell">Blankson Wilhemina Adelina</td><td class="tb-cell">31</td><td class="tb-cell">78</td><td class="tb-cell">8</td></tr><tr><td class="tb-cell">SAM LOIS KUKUA PANYIN</td><td class="tb-cell">31</td><td class="tb-cell">78</td><td class="tb-cell">8</td></tr><tr><td class="tb-cell">Asamoah Aseda Nana Yaa</td><td class="tb-cell">30</td><td class="tb-cell">75</td><td class="tb-cell">10</td></tr><tr><td class="tb-cell">Miriam Boama</td><td class="tb-cell">30</td><td class="tb-cell">75</td><td class="tb-cell">10</td></tr><tr><td class="tb-cell">Charity sackeyfio</td><td class="tb-cell">30</td><td class="tb-cell">75</td><td class="tb-cell">10</td></tr><tr><td class="tb-cell">0124040006</td><td class="tb-cell">29</td><td class="tb-cell">73</td><td class="tb-cell">13</td></tr><tr><td class="tb-cell">Sam Lyza Kukua Kakraba</td><td class="tb-cell">29</td><td class="tb-cell">73</td><td class="tb-cell">13</td></tr><tr><td class="tb-cell">Hammond Adelle</td><td class="tb-cell">29</td><td class="tb-cell">73</td><td class="tb-cell">13</td></tr><tr><td class="tb-cell">Arthur Rachel </td><td class="tb-cell">27</td><td class="tb-cell">68</td><td class="tb-cell">16</td></tr><tr><td class="tb-cell">Pearl Doko</td><td class="tb-cell">27</td><td class="tb-cell">68</td><td class="tb-cell">16</td></tr><tr><td class="tb-cell">Asamoah Aseda Nana Yaa</td><td class="tb-cell">27</td><td class="tb-cell">68</td><td class="tb-cell">16</td></tr><tr><td class="tb-cell">0124040003</td><td class="tb-cell">27</td><td class="tb-cell">68</td><td class="tb-cell">16</td></tr><tr><td class="tb-cell">Pearl Doko</td><td class="tb-cell">26</td><td class="tb-cell">65</td><td class="tb-cell">20</td></tr><tr><td class="tb-cell">0124040024</td><td class="tb-cell">25</td><td class="tb-cell">63</td><td class="tb-cell">21</td></tr><tr><td class="tb-cell">Yakohene-Tsotovor Dziedzorm</td><td class="tb-cell">25</td><td class="tb-cell">63</td><td class="tb-cell">21</td></tr><tr><td class="tb-cell">Cromwell Justina Ankomah</td><td class="tb-cell">25</td><td class="tb-cell">63</td><td class="tb-cell">21</td></tr><tr><td class="tb-cell">jesse richardson</td><td class="tb-cell">24</td><td class="tb-cell">60</td><td class="tb-cell">24</td></tr><tr><td class="tb-cell">Trudy Tetteh-Akwetey</td><td class="tb-cell">23</td><td class="tb-cell">57</td><td class="tb-cell">25</td></tr><tr><td class="tb-cell">Annang Nii Adam</td><td class="tb-cell">23</td><td class="tb-cell">57</td><td class="tb-cell">25</td></tr><tr><td class="tb-cell">Allotment Naa Akushika</td><td class="tb-cell">23</td><td class="tb-cell">57</td><td class="tb-cell">25</td></tr><tr><td class="tb-cell">Noi Shirah Naa Norkor </td><td class="tb-cell">17</td><td class="tb-cell">43</td><td class="tb-cell">28</td></tr><tr><td class="tb-cell">H</td><td class="tb-cell">0</td><td class="tb-cell">N/A</td><td class="tb-cell">29</td></tr><tr><td class="tb-cell">H</td><td class="tb-cell">0</td><td class="tb-cell">N/A</td><td class="tb-cell">29</td></tr></tbody></table></div></div></div><div class="sect-title"><h1>Graph of Correct Scores</h1><div class="info"><i class="fas fa-info-circle"></i><span>This graph shows the number of times a particular question received the correct response.</span></div><canvas role="img" height="1100" width="2200" style="display: block; box-sizing: border-box; height: 550px; width: 1100px;"></canvas></div><div class="sect-title"><h1>Freqently Missed Questions</h1><div class="info"><i class="fas fa-info-circle"></i><span>Frequently missed questions shows the percentage of students who missed a particular question.</span></div><div class="missed-ques"><p class="ques">Q1) A set of menu forming a complete meal at a set price is known as</p><p class="pct bold">100.00%</p></div><div class="missed-ques"><p class="ques">Q6) Which of these is steamed indirectly?</p><p class="pct bold">60.00%</p></div><div class="missed-ques"><p class="ques">Q8) Which of the following methods is not suitable for cooking meat?</p><p class="pct bold">66.67%</p></div><div class="missed-ques"><p class="ques">Q14) Renovation involves</p><p class="pct bold">70.00%</p></div><div class="missed-ques"><p class="ques">Q21) When making a French seam, start by placing----------- together</p><p class="pct bold">73.33%</p></div><div class="missed-ques"><p class="ques">Q24) The sewing machine needle should be inserted with the flat side facing the ----- of the machine</p><p class="pct bold">60.00%</p></div><div class="missed-ques"><p class="ques">Q32) Which of the following finishes will be more attractive at the edge of a tablecloth</p><p class="pct bold">80.00%</p></div><div class="missed-ques"><p class="ques">Q35) the seam line on a garment can be transferred from a pattern unto fabric by</p><p class="pct bold">53.33%</p></div></div></div><div class="foot-note"><div class="foot-content"><p>Data source to this report is neither created nor endorsed by SWPH.</p><p>© 2022 -  <b>Scribble Works</b></p></div></div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+    

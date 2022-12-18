@@ -17,14 +17,14 @@ function setCorrectAnswers(questions) {
 }
 
 function analysisOfAnswers2(dataMatrix, questions, metaData) {
-    // console.log('analysing answers......')
+    console.log('analysing answers......\n')
 
     let questionsSet = setCorrectAnswers(questions);
     // console.log(questionsSet)
 
     let output = []
     let noQuestions = questionsSet.length
-    let noOfResponses = dataMatrix.length - 1; // -1 here is so that the matrix header is not included in count
+    let noOfResponses = dataMatrix.length; // -1 here is so that the matrix header is not included in count
     
     let dataStartColumn = metaData.collectsEmail ? 3 : 2
     let questionCounter = 0
@@ -38,12 +38,13 @@ function analysisOfAnswers2(dataMatrix, questions, metaData) {
                 
                 let userAnswer = '' + dataMatrix[i][j + dataStartColumn]  // adding offset of where the data actually starts from in the trix
                 let question = questionsSet[j];
+                if (!question.respFreqString) question.respFreqString = '';
                 // console.log(question, String(userAnswer), question[String(userAnswer)], '\n')
                 if (question[String(userAnswer)]) {
                     question.respFreqString += question[String(userAnswer)];
                 }
                 else {
-                    //question.respFreqString +=  '-'
+
                 }
                 // Putting the question back into it's place
                 questionsSet[j] = question
@@ -103,23 +104,14 @@ function getCorrectAnswer(submission) {
 }
 
 function frequencyCount(answerString) {
-    let A = 0,
-        B = 0,
-        C = 0,
-        D = 0;
-    for (let i = 0; i < answerString.length; i++) {
-        const letter = answerString[i];
-        if (letter == "A") {
-            A++;
-        } else if (letter == "B") {
-            B++;
-        } else if (letter == "C") {
-            C++;
-        } else if (letter == "D") {
-            D++;
-        }
+    let answerArray = answerString.split('');
+    let answerMap = {};
+    for (let answer of answerArray) {
+        if (!answerMap[answer])
+            answerMap[answer] = 0;
+        answerMap[answer] += 1;
     }
-    return { A, B, C, D };
+    return answerMap;
 }
 
 /* Compiles raw sccore of each Student submission */
@@ -151,14 +143,9 @@ function getTotalPoints(questionsArray) {
 }
 
 function rank(a, b) {
-    let comparism = 0
-    if (a.score > b.score) {
-        comparism = 1
-    }
-    else if (a.score < b.score) {
-        comparism = -1
-    }
-    return comparism * -1
+    if (a.score < b.score) return 1;
+    if (a.score > b.score) return -1;
+    return 0;
 }
 
 function numberRank(sortedArray) {
@@ -190,36 +177,39 @@ function totalQuizScore(questions) {
 }
 
 function processDataMatrix(dataMatrix, questions, metaData) {
-    dataMatrix[0]
+    console.log('Number of responses:', dataMatrix.length)
     let output = [];
     let noQuestions = questions.length;
     let noOfResponses = dataMatrix.length;
     let questionCounter = 0;
     const uploaded =  metaData.uploaded;
-    //let dataStartColumn = metaData.collectsEmail ? 3 : 2
-    let dataStartColumn = metaData.collectsEmail ? 3 : 2
-    let answersStartColumn = metaData.collectsEmail ? 3 : 2
+    let dataStartColumn = metaData.collectsEmail ? 3 : 2;
     // Focussing on looping through only questions and student responces
     for (let i = 1; i < noOfResponses; i++) { // i represents the row of the data
+        console.log('Analyzing response number', i, 'for', dataMatrix[i][dataStartColumn])
         let itemResponse = {}
         itemResponse.responses = []
-        for (let j = dataStartColumn; j < noQuestions; j++) { // j < dataMatrix[i].length // j represents the column of the 2x2 matrix
-            itemResponse.responseNumber = i;//+ 1;
-            itemResponse.score = uploaded === 'google' ? (metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1]) : (metaData.collectsEmail ? dataMatrix[i][4] : dataMatrix[i][3]);
-            itemResponse.percentage =
-                itemResponse.name = uploaded === 'google' ? (metaData.collectsEmail ? dataMatrix[i][3] : dataMatrix[i][2]) : (metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1]);
-            itemResponse.rank = i;
+        itemResponse.responseNumber = i;//+ 1;
+        itemResponse.score = metaData.collectsEmail ? dataMatrix[i][2] : dataMatrix[i][1];
+        itemResponse.percentage =
+            itemResponse.name = metaData.collectsEmail ? dataMatrix[i][3] : dataMatrix[i][2];
+        itemResponse.rank = i;
+        let trimmedData = [...dataMatrix[i].slice(dataStartColumn)];
+        for (let j = 0; j < noQuestions; j++) { // j < dataMatrix[i].length // j represents the column of the 2x2 matrix
             itemResponse.responses.push({
-                title: dataMatrix[0][j],
-                response: dataMatrix[i][j]
+                title: dataMatrix[0][j + dataStartColumn],
+                response: trimmedData[j]
             })
             questionCounter++
         }
         questionCounter = 1
         output.push(itemResponse)
     }
+    console.log('Output length before ranking:', output.length)
+    const sortedArray = output.sort(rank);
+    // console.log(sortedArray)
     // Sorting out proper ranking values
-    return numberRank(output.sort(rank))
+    return sortedArray;
     //return output;
 }
 
