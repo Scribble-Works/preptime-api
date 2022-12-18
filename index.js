@@ -6,7 +6,6 @@ const cors = require('cors');
 const app = express();
 const api = require('./routes/api');
 const download = require('./routes/download');
-const generatepdf = require('./routes/generatePDF');
 
 // const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 5000;
@@ -26,7 +25,6 @@ async function init() {
     
         app.use('/api', api)
         app.use('/download', download)
-        app.use('/generatepdf', generatepdf)
         
         // Test resquest/response to make sure server is running.
         app.get('/', (req, res) => {
