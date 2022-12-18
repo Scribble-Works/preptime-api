@@ -10,7 +10,7 @@ This repository contains the resources and instructions that will get you a copy
 
 To get the project started, there are some tools you need to install on your local machine. The list of tools you need to install have been provided with a guide on how to install these tools.
 
-#### `Install git`
+##### `Install git`
 
 For users on Mac, the best way to install git is by using [Homebrew](https://brew.sh/). To install Homebrew, open your shell and run the following command:
 
@@ -36,7 +36,7 @@ For users on Windows, download the [latest version](https://git-scm.com/download
 $ git --version
 ```
 
-#### `Install Node.js`
+##### `Install Node.js`
 
 For users on Mac, install Node.js with Homebrew using the following command:
 
@@ -51,7 +51,7 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 $ node --version
 ```
 
-#### `Install MongoDB`
+##### `Install MongoDB`
 
 The project uses mongodb as the database for storing all data and other relevant informations. The community edition of mongodb is the prefered edition used in this project. For users on Mac, we can install mongodb using the Homebrew package manager as we did for the previous installations.
 
@@ -135,7 +135,7 @@ The original project is deployed and hosted on Amazon Web Service. But developer
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/Scribble-Works/preptime-api/blob/main/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -145,8 +145,8 @@ We use [git](https://git-scm.com/) for versioning. For the versions available, s
 
 * **Scribble Works** - *Initial work* - [Scribble Works](https://github.com/Scribble-Works)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Scribble-Works/preptime-analytics/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the  GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
