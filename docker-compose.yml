@@ -1,4 +1,4 @@
-version: '2.10.2'
+version: "2.10.2"
 
 services:
   # MongoDB Services
@@ -26,6 +26,5 @@ services:
       - DB_NAME=preptime
     depends_on:
       - mongo_db
-
 # volumes:
 #   mongo_db: {}
