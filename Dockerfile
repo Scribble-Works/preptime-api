@@ -12,6 +12,7 @@ COPY yarn.lock .
 
 # Install all dependencies
 RUN npm i yarn && yarn install
+RUN yarn add dotenv
 
 # Copy the rest of the application source code
 COPY . .
