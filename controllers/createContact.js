@@ -20,7 +20,6 @@ module.exports = async (req, res) => {
     const response = await axiosHubspot.post("/crm/v3/objects/contacts", data);
     res.status(200).json(response.data);
   } catch (e) {
-    console.log("error", e);
     res.status(500).json({
       success: false,
     });
