@@ -1,5 +1,5 @@
 const ResponseData = require("../models/responseModel");
-const analyser = require("../functions");
+const analyser = require("../utils");
 
 module.exports = async (req, res) => {
   let instance = { ...req.body };

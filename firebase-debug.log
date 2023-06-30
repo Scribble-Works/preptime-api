@@ -1,0 +1,339 @@
+[debug] [2023-06-30T18:12:46.368Z] ----------------------------------------------------------------------
+[debug] [2023-06-30T18:12:46.371Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Antenor Whyte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-06-30T18:12:46.372Z] CLI Version:   12.0.0
+[debug] [2023-06-30T18:12:46.372Z] Platform:      win32
+[debug] [2023-06-30T18:12:46.373Z] Node Version:  v18.16.0
+[debug] [2023-06-30T18:12:46.373Z] Time:          Fri Jun 30 2023 18:12:46 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-06-30T18:12:46.373Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-30T18:12:46.462Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-30T18:12:46.462Z] > authorizing via signed-in user (antenor.osei-nyarko@handytradie.com.gh)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-06-30T18:12:46.479Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4002 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4002 instead."}}
+[debug] [2023-06-30T18:12:46.483Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4002},{"address":"::1","family":"IPv6","port":4002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-30T18:12:46.499Z] [hub] writing locator at C:\Users\ANTENO~1\AppData\Local\Temp\hub-preptime-analytics.json
+[debug] [2023-06-30T18:12:46.529Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-30T18:12:46.529Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-30T18:12:46.529Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4002},{"address":"::1","family":"IPv6","port":4002}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-06-30T18:12:46.533Z] defaultcredentials: writing to file C:\Users\Antenor Whyte\AppData\Roaming\firebase\antenor_osei-nyarko_handytradie.com.gh_application_default_credentials.json
+[debug] [2023-06-30T18:12:46.537Z] Setting GAC to C:\Users\Antenor Whyte\AppData\Roaming\firebase\antenor_osei-nyarko_handytradie.com.gh_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Antenor Whyte\\AppData\\Roaming\\firebase\\antenor_osei-nyarko_handytradie.com.gh_application_default_credentials.json"}}
+[debug] [2023-06-30T18:12:46.540Z] > refreshing access token with scopes: []
+[debug] [2023-06-30T18:12:46.545Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-30T18:12:46.545Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-30T18:12:47.195Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-06-30T18:12:47.196Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-30T18:12:47.217Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/preptime-analytics/adminSdkConfig [none]
+[debug] [2023-06-30T18:12:48.048Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/preptime-analytics/adminSdkConfig 200
+[debug] [2023-06-30T18:12:48.049Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/preptime-analytics/adminSdkConfig {"projectId":"preptime-analytics","storageBucket":"preptime-analytics.appspot.com"}
+[debug] [2023-06-30T18:12:48.086Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-30T18:12:48.086Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-30T18:12:48.086Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Antenor Whyte\\.cache\\firebase\\emulators\\ui-v1.11.6\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Antenor Whyte\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.6\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-30T18:12:48.253Z] Web / API server started at 127.0.0.1:4002
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4002\n"}}
+[debug] [2023-06-30T18:12:48.254Z] Web / API server started at ::1:4002
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4002\n"}}
+[info] i  functions: Watching "D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\" for Cloud Functions..."}}
+[debug] [2023-06-30T18:12:48.369Z] Validating nodejs source
+[debug] [2023-06-30T18:12:50.449Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "@hubspot/api-client": "^8.9.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "googleapis": "^107.0.0",
+    "jio": "^3.45.0",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.5.4",
+    "mtn-momo": "^2.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "nodemon": "^2.0.19"
+  },
+  "private": true
+}
+[debug] [2023-06-30T18:12:50.449Z] Building nodejs source
+[debug] [2023-06-30T18:12:50.450Z] Failed to find version of module node: reached end of search path D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-30T18:12:50.453Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-30T18:12:50.466Z] Found firebase-functions binary at 'D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-30T18:12:50.864Z] Serving at port 8077
+
+[error] !!  functions: Failed to load function definition from source: FetchError: request to http://localhost:8077/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8077 {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FetchError: request to http://localhost:8077/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8077"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4002/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4002/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-06-30T18:13:27.284Z] File D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\expressEndpoints\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\expressEndpoints\\index.js changed, reloading triggers"}}
+[debug] [2023-06-30T18:13:28.292Z] Validating nodejs source
+[debug] [2023-06-30T18:13:30.424Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "@hubspot/api-client": "^8.9.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "googleapis": "^107.0.0",
+    "jio": "^3.45.0",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.5.4",
+    "mtn-momo": "^2.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "nodemon": "^2.0.19"
+  },
+  "private": true
+}
+[debug] [2023-06-30T18:13:30.425Z] Building nodejs source
+[debug] [2023-06-30T18:13:30.425Z] Failed to find version of module node: reached end of search path D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-30T18:13:30.427Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-30T18:13:30.438Z] Found firebase-functions binary at 'D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-30T18:13:30.851Z] Serving at port 8213
+
+[debug] [2023-06-30T18:13:32.298Z] Got response from /__/functions.yaml {"endpoints":{"preptimeAPI":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"preptimeAPI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-30T18:13:32.311Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: preptimeAPI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: preptimeAPI."}}
+[info] +  functions[us-central1-preptimeAPI]: http function initialized (http://127.0.0.1:5001/preptime-analytics/us-central1/preptimeAPI). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/preptime-analytics/us-central1/preptimeAPI)."}}
+[debug] [2023-06-30T18:14:04.562Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:14:09.812Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:14:18.559Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:14:21.816Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:14:24.511Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:14:24.511Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:14:24.512Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:14:24.511Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:14:24.513Z] Accepted request GET /preptime-analytics/us-central1/preptimeAPI --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:14:24.515Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:14:24.517Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/"}}
+[debug] [2023-06-30T18:14:24.544Z] [worker-pool] addWorker(us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-preptimeAPI)"}}
+[debug] [2023-06-30T18:14:24.546Z] [worker-pool] Adding worker with key us-central1-preptimeAPI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-preptimeAPI, total=1"}}
+[debug] [2023-06-30T18:14:26.811Z] [runtime-status] [42744] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:26.813Z] [runtime-status] [42744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:26.814Z] [runtime-status] [42744] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-06-30T18:14:26.816Z] [runtime-status] [42744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:27.377Z] [runtime-status] [42744] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-06-30T18:14:27.377Z] [runtime-status] [42744] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-06-30T18:14:27.392Z] [runtime-status] [42744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:27.398Z] [runtime-status] [42744] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:27.484Z] [runtime-status] [42744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-30T18:14:27.485Z] [runtime-status] [42744] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.9.0","resolution":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-06-30T18:14:28.722Z] [runtime-status] [42744] Functions runtime initialized. {"cwd":"D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Functions runtime initialized. {\"cwd\":\"D:\\\\Programming stuff\\\\HandyTradie\\\\PrepTime analyser\\\\preptime-api\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-06-30T18:14:28.723Z] [runtime-status] [42744] Listening to port: \\?\pipe\fire_emu_4ca8f3f1ce5c0ae9 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[runtime-status] [42744] Listening to port: \\\\?\\pipe\\fire_emu_4ca8f3f1ce5c0ae9"}}
+[debug] [2023-06-30T18:14:28.844Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:14:28.846Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:14:28.849Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:14:28.866Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 19.2976ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 19.2976ms"}}
+[debug] [2023-06-30T18:14:28.869Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:14:28.870Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:14:28.870Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:14:28.871Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:14:29.239Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:14:29.239Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:14:29.239Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:14:29.239Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:14:29.239Z] Accepted request GET /preptime-analytics/us-central1/preptimeAPI --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:14:29.241Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:14:29.241Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/"}}
+[debug] [2023-06-30T18:14:29.241Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:14:29.242Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:14:29.248Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 5.8604ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 5.8604ms"}}
+[debug] [2023-06-30T18:14:29.249Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:14:29.249Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:14:29.249Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:14:29.249Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:14:29.459Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-06-30T18:14:58.279Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:15:16.448Z] Functions emulator received unknown request at path /preptime-anal.1:5001/preptime-analytics/us-central1/preptimeAPI
+[debug] [2023-06-30T18:15:33.902Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:15:33.902Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:15:33.902Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:15:33.902Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:15:33.902Z] Accepted request POST /preptime-analytics/us-central1/preptimeAPI --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:15:33.903Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:15:33.903Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/"}}
+[debug] [2023-06-30T18:15:33.903Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:15:33.905Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:15:33.913Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 8.3521ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 8.3521ms"}}
+[debug] [2023-06-30T18:15:33.914Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:15:33.915Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:15:33.916Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:15:33.916Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:15:40.032Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:15:40.032Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:15:40.033Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI-2023-06-30T18:15:40.032Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:15:40.033Z] Accepted request GET /preptime-analytics/us-central1/preptimeAPI --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:15:40.034Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:15:40.034Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI, mapping to path=/"}}
+[debug] [2023-06-30T18:15:40.034Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:15:40.035Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:15:40.038Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 3.8374ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 3.8374ms"}}
+[debug] [2023-06-30T18:15:40.039Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:15:40.040Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:15:40.040Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:15:40.040Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:00.271Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI/api-2023-06-30T18:16:00.271Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:00.272Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI/api-2023-06-30T18:16:00.271Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:16:00.272Z] Accepted request GET /preptime-analytics/us-central1/preptimeAPI/api --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:16:00.273Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:16:00.273Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api, mapping to path=/api {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api, mapping to path=/api"}}
+[debug] [2023-06-30T18:16:00.273Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:16:00.274Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:16:00.278Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 4.1777ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 4.1777ms"}}
+[debug] [2023-06-30T18:16:00.279Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:16:00.280Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:16:00.280Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:16:00.280Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:04.340Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI/api-2023-06-30T18:16:04.340Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:04.340Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI/api-2023-06-30T18:16:04.340Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:16:04.340Z] Accepted request POST /preptime-analytics/us-central1/preptimeAPI/api --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:16:04.341Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:16:04.341Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api, mapping to path=/api {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api, mapping to path=/api"}}
+[debug] [2023-06-30T18:16:04.341Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:16:04.342Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[debug] [2023-06-30T18:16:04.346Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 3.8617ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 3.8617ms"}}
+[debug] [2023-06-30T18:16:04.347Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:16:04.347Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:16:04.347Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:16:04.347Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:36.992Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses-2023-06-30T18:16:36.992Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:36.993Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses-2023-06-30T18:16:36.992Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:16:36.993Z] Accepted request POST /preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:16:36.993Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:16:36.994Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses, mapping to path=/api/scribbleworks-demoresponses {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses, mapping to path=/api/scribbleworks-demoresponses"}}
+[debug] [2023-06-30T18:16:36.994Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:16:36.995Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[info] >  analysing answers...... {"user":"analysing answers......","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m analysing answers......"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[debug] [2023-06-30T18:16:37.001Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 6.5825ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 6.5825ms"}}
+[debug] [2023-06-30T18:16:37.002Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:16:37.003Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:16:37.003Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:16:37.003Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] >  questions is not iterable {"user":"questions is not iterable","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m questions is not iterable"}}
+[debug] [2023-06-30T18:16:40.578Z] [work-queue] {"queuedWork":["/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses-2023-06-30T18:16:40.578Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-30T18:16:40.578Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses-2023-06-30T18:16:40.578Z"],"workRunningCount":1}
+[debug] [2023-06-30T18:16:40.579Z] Accepted request POST /preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses --> us-central1-preptimeAPI
+[debug] [2023-06-30T18:16:40.581Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-30T18:16:40.581Z] [functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses, mapping to path=/api/scribbleworks-demoresponses {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/preptime-analytics/us-central1/preptimeAPI/api/scribbleworks-demoresponses, mapping to path=/api/scribbleworks-demoresponses"}}
+[debug] [2023-06-30T18:16:40.582Z] [worker-pool] submitRequest(triggerId=us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-preptimeAPI)"}}
+[info] i  functions: Beginning execution of "us-central1-preptimeAPI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Beginning execution of \"us-central1-preptimeAPI\""}}
+[debug] [2023-06-30T18:16:40.584Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: BUSY"}}
+[info] >  analysing answers...... {"user":"analysing answers......","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m analysing answers......"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[debug] [2023-06-30T18:16:40.600Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-preptimeAPI" in 16.9062ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finished \"us-central1-preptimeAPI\" in 16.9062ms"}}
+[debug] [2023-06-30T18:16:40.603Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: IDLE"}}
+[debug] [2023-06-30T18:16:40.604Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-30T18:16:40.604Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-30T18:16:40.605Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] >  questions is not iterable {"user":"questions is not iterable","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"\u001b[90m> \u001b[39m questions is not iterable"}}
+[debug] [2023-06-30T18:18:12.735Z] File D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\expressEndpoints\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File D:\\Programming stuff\\HandyTradie\\PrepTime analyser\\preptime-api\\functions\\expressEndpoints\\index.js changed, reloading triggers"}}
+[debug] [2023-06-30T18:18:13.741Z] Validating nodejs source
+[debug] [2023-06-30T18:18:17.164Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "@hubspot/api-client": "^8.9.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "googleapis": "^107.0.0",
+    "jio": "^3.45.0",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.5.4",
+    "mtn-momo": "^2.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "nodemon": "^2.0.19"
+  },
+  "private": true
+}
+[debug] [2023-06-30T18:18:17.164Z] Building nodejs source
+[debug] [2023-06-30T18:18:17.164Z] Failed to find version of module node: reached end of search path D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-30T18:18:17.166Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-30T18:18:17.179Z] Found firebase-functions binary at 'D:\Programming stuff\HandyTradie\PrepTime analyser\preptime-api\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-30T18:18:17.582Z] Serving at port 8644
+
+[debug] [2023-06-30T18:18:18.933Z] Got response from /__/functions.yaml {"endpoints":{"preptimeAPI":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"preptimeAPI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-30T18:18:18.938Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: preptimeAPI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: preptimeAPI."}}
+[debug] [2023-06-30T18:18:18.970Z] [worker-pool] Shutting down IDLE worker (us-central1-preptimeAPI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-preptimeAPI)"}}
+[debug] [2023-06-30T18:18:18.970Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: FINISHING"}}
+[debug] [2023-06-30T18:18:18.981Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: exited"}}
+[debug] [2023-06-30T18:18:18.981Z] [worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-preptimeAPI"},"extension":{},"message":"[worker-us-central1-preptimeAPI-74442bb9-2830-4fc4-976d-b34d39d3039f]: FINISHED"}}
