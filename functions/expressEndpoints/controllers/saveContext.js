@@ -1,6 +1,6 @@
-const ResponseData = require("../models/responseModel");
+// const ResponseData = require("../models/responseModel");
 const analyser = require("../utils");
-
+const { ResponseSchema } = require("../models/responseModel");
 module.exports = async (req, res) => {
   let instance = { ...req.body };
   try {
@@ -20,8 +20,8 @@ module.exports = async (req, res) => {
     );
     // instance.dataMatrix = null;
     // console.log(instance)
-
-    const doc = await ResponseData.create(instance);
+    const responseSchema = new ResponseSchema(instance);
+    const doc = await responseSchema.create(instance);
     res.status(200).json(doc);
   } catch (err) {
     console.log(err.message);
