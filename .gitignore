@@ -2,3 +2,5 @@
 node_modules
 db
 .env
+
+*firebase_admin_sdk.json
