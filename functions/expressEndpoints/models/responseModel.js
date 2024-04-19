@@ -1,37 +1,6 @@
-// const mongoose = require('mongoose');
-// const responseSchema = new mongoose.Schema({
-//     created_at: {
-//         type: Date,
-//         required: true,
-//         default: new Date()
-//     },
-//     dataMatrix: {
-//         type: Array
-//     },
-//     metaData: {
-//         type: Object,
-//         required: true
-//     },
-//     questions: {
-//         type: Array,
-//         required: true
-//     },
-//     sheet_id: {
-//         type: String
-//     },
-//     title: {
-//         type: String,
-//         required: true
-//     },
-//     responses: {
-//         type: Array,
-//         required: true
-//     }
-// })
+const { json } = require("express");
+const { db } = require("../../firebase-config/index");
 
-const { firestore } = require("../../firebase");
-
-// module.exports = mongoose.model('responses', responseSchema)
 class ResponseSchema {
   created_at;
   dataMatrix;
@@ -41,17 +10,17 @@ class ResponseSchema {
   title;
   responses;
 
-  constructor(metaData, questions, sheet_id, title, responses, dataMatrix) {
-    if (!responses) throw Error("Responses is required");
-    if (!title) throw Error("Title is required");
-    if (!questions) throw Error("Questions is required");
-    if (!metaData) throw Error("Meta data is required");
-    this.metaData = metaData;
-    this.sheet_id = sheet_id;
-    this.title = title;
-    this.responses = responses;
-    this.questions = questions;
-    this.dataMatrix = dataMatrix;
+  constructor(instance) {
+    if (!instance.responses) throw Error("Responses is required");
+    if (!instance.title) throw Error("Title is required");
+    if (!instance.questions) throw Error("Questions is required");
+    if (!instance.metaData) throw Error("Meta data is required");
+    this.metaData = instance.metaData;
+    this.sheet_id = instance.sheet_id;
+    this.title = instance.title;
+    this.responses = instance.responses;
+    this.questions = instance.questions;
+    this.dataMatrix = JSON.stringify(instance.dataMatrix);
     this.created_at = new Date();
   }
 
@@ -68,13 +37,22 @@ class ResponseSchema {
   }
   async create() {
     const data = this.getResponse();
-    const docRef = await firestore.collection("responses").add(data);
+    console.log("data", data);
+    const docRef = await db.collection("responses").add({
+      ...data,
+    });
     return { ...data, _id: docRef.id };
   }
 
   static async findById(id) {
-    const docSnpashot = await firestore.collection("responses").doc(id).get();
-    const res = { ...docSnpashot.data(), _id: docSnpashot.id };
+    const docSnpashot = await db.collection("responses").doc(id).get();
+    const docData = docSnpashot.data();
+    const dataMatrix = JSON.parse(docData.dataMatrix);
+    const res = {
+      dataMatrix: dataMatrix,
+      _id: docSnpashot.id,
+      ...docData,
+    };
 
     return res;
   }

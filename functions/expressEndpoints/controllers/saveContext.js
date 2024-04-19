@@ -1,8 +1,10 @@
-// const ResponseData = require("../models/responseModel");
 const analyser = require("../utils");
-const { ResponseSchema } = require("../models/responseModel");
+
+const ResponseSchema = require("../models/responseModel");
+
 module.exports = async (req, res) => {
   let instance = { ...req.body };
+  console.log(instance);
   try {
     // console.log('Attempting to process data:\n',instance)
     instance.questions = analyser.analysisOfAnswers2(
