@@ -3,7 +3,12 @@ const path = require("path");
 
 module.exports = (req, res) => {
   const { filename } = req.params;
-  const filePath = path.join(process.cwd(), `/fileTemplates/${filename}`);
+  const filePath = path.join(
+    process.cwd(),
+    `expressEndpoints/fileTemplates/${filename}`
+  );
+
+  console.log("pah", filePath);
   let stream = fs.createReadStream(filePath);
   stream.pipe(res);
   stream.on("error", (err) => {

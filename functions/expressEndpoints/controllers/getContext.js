@@ -1,7 +1,8 @@
 // const ResponseData = require('../models/responseModel');
-const { ResponseSchema } = require("../models/responseModel");
+const ResponseSchema = require("../models/responseModel");
 module.exports = async (req, res) => {
   const { id } = req.params;
+  console.log("id", id);
   try {
     const data = await ResponseSchema.findById(id);
     res.status(200).json(data);
