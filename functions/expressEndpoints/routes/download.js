@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const downloadTemplates = require("../controllers/downloadTemplate");
+const downloadTemplates = require("../controllers/downloadTemplates");
 
 router.get("/:filename", downloadTemplates);
 

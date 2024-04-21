@@ -17,4 +17,4 @@ app.get("/", (req, res) => {
   });
 });
 
-exports.preptimeAPI = app;
+module.exports = app;

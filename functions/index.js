@@ -8,9 +8,7 @@
  */
 
 const functions = require("firebase-functions");
-// const { onRequest } = require("firebase-functions/v1/https");
-const logger = require("firebase-functions/logger");
-const { preptimeAPI } = require("../functions/expressEndpoints/index");
+const preptimeApi = require("./expressEndpoints");
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
 
@@ -19,4 +17,4 @@ const { preptimeAPI } = require("../functions/expressEndpoints/index");
 //   response.send("Hello from Firebase!");
 // });
 
-exports.preptimeAPI = functions.https.onRequest(preptimeAPI);
+exports.preptimeAPIv2 = functions.https.onRequest(preptimeApi);

@@ -51,48 +51,25 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 $ node --version
 ```
 
-##### `Install MongoDB`
+##### `Install Firebase CLI`
 
-The project uses mongodb as the database for storing all data and other relevant informations. The community edition of mongodb is the prefered edition used in this project. For users on Mac, we can install mongodb using the Homebrew package manager as we did for the previous installations.
+The project uses firebase firestore as the database for storing all data and other relevant informations.
 
-Installing Mongodb on Mac:
+Installation
 
-Tap the MongoDB Homebrew Tap to download the official Homebrew formula for MongoDB and the Database Tools, by running the following command in your macOS Terminal:
+You can install the Firebase CLI using npm (the Node Package Manager). Note that you will need to install Node.js and npm. Installing Node.js should install npm as well.
 
-```
-$ brew tap mongodb/brew
-```
+To download and install the Firebase CLI run the following command:
 
-Update Homebrew and all existing formulae:
+To install yarn globally use:
 
 ```
-$ brew update
+$ npm install -g yarn //
+$ npm install -g firebase-tools //when using npm
+$ yarn global add firebase-tools //when using yarn
 ```
 
-To install MongoDB, run the following command in your macOS Terminal application:
-
-```
-$ brew install mongodb-community@6.0
-```
-
-To run MongoDB (i.e. the mongod process) as a macOS service, run:
-
-```
-$ brew services start mongodb-community@6.0
-```
-
-To run MongoDB (i.e. the mongod process) manually as a background process, run:
-
-```
-$ mongod --config /usr/local/etc/mongod.conf --fork   //for MacOS running intel processor
-$ mongod --config /opt/homebrew/etc/mongod.conf --fork   // for MacOS running Apple M1 processor
-```
-
-Installation on Windows:
-
-Install MongoDB Community Edition on Windows using the default installation wizard. Download the MongoDB Community .msi installer from the following
-link: [MongoDB Download Center](https://www.mongodb.com/try/download/community?tck=docs_server). You can also follow the [documentation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) for a step by step guide on how to install MongoDB using the .msi installer
-on Windows. The .msi installer does not include mongosh. Follow the [mongosh installation instructions](https://www.mongodb.com/docs/mongodb-shell/install/) to download and install the shell separately.
+This will provide you with the globally accessible firebase command.
 
 ### Installation
 
@@ -102,36 +79,56 @@ Now that you have installed the tools required to start the project locally, we 
 $ git clone https://github.com/Scribble-Works/preptime-api.git
 ```
 
-After git is done cloning the project repository, move into the project folder and install the dependencies:
+After git is done cloning the project repository, move into the project folder to initialize a firebase project by creating a new project or adding the app to an existing project and install the dependencies:
+
+Creating or adding a Firebase project
+
+Create a new firebase project with the following command:
+
+```
+$ firebase init //
+```
+
+Or Add an existing project by using :
+
+```
+$ firebase use --add
+```
 
 ```
 $ cd preptime-api
 $ npm install -g yarn    // project uses yarn
-$ yarn install        // or simply "yarn"
+$ yarn install        // or simply "yarn" if yarn is already installed
 ```
 
 You will then have to create your environment variables in a .env file with the following variables:
 
-* PORT - port on which the server runs on. Default is port 5000.
-* DB_HOST - database hostname. Default is mongo_db (should be the same as the MongoDB service name in the docker-compose file)
-* DB_PORT - database port. Defaults to 27017.
-* DB_NAME - name of your database.
+-HUBSPOT_KEY - The API key to communicate with hubspot crm
+-HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
+-HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
 
 Now start the development server with the following command:
 
 ```
-$ yarn dev
+$ yarn serve
 ```
 
 ## Deployment
 
-The original project is deployed and hosted on Amazon Web Service. But developers are encouraged to deploy or host it on any other service they prefer. The recommended method for building this project for production is by using Docker and docker-compose.
+The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer as cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project
+
+Once a firebase project has been initialized use the follow command to deploy your function:
+
+```
+$ yarn deploy
+```
 
 ## Built With
 
-* [Express](https://expressjs.com/) - The backend framework used
-* [MongoDB](https://www.mongodb.com/docs/manual/tutorial/getting-started/) - Database Management
-* [Yarn](https://yarnpkg.com/) - Dependencies and package management
+- [Express](https://expressjs.com/) - The backend framework used
+- [Firebase Firestore](https://firebase.google.com/docs/firestore/quickstart) - Database Management
+- [Firebase Cloud Functions](https://firebase.google.com/docs/functions) - Serverless hosting
+- [Yarn](https://yarnpkg.com/) - Dependencies and package management
 
 ## Contributing
 
@@ -139,14 +136,14 @@ Please read [CONTRIBUTING.md](https://github.com/Scribble-Works/preptime-api/blo
 
 ## Versioning
 
-We use [git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Scribble-Works/project/tags). 
+We use [git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Scribble-Works/project/tags).
 
 ## Authors
 
-* **Scribble Works** - *Initial work* - [Scribble Works](https://github.com/Scribble-Works)
+- **Scribble Works** - _Initial work_ - [Scribble Works](https://github.com/Scribble-Works)
 
 See also the list of [contributors](https://github.com/Scribble-Works/preptime-analytics/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the  GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
