@@ -103,9 +103,9 @@ $ yarn install        // or simply "yarn" if yarn is already installed
 
 You will then have to create your environment variables in a .env file with the following variables:
 
--HUBSPOT_KEY - The API key to communicate with hubspot crm
--HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
--HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
+- HUBSPOT_KEY - The API key to communicate with hubspot crm
+- HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
+- HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
 
 Now start the development server with the following command:
 
@@ -115,7 +115,7 @@ $ yarn serve
 
 ## Deployment
 
-The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer as cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project
+The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer.Cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project
 
 Once a firebase project has been initialized use the follow command to deploy your function:
 
