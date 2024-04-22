@@ -101,7 +101,7 @@ $ npm install -g yarn    // project uses yarn
 $ yarn install        // or simply "yarn" if yarn is already installed
 ```
 
-### `Supabase Integration (Opensource alternative to Firebase Firestore)`
+### Supabase Integration (Opensource alternative to Firebase Firestore)
 
 For an opensource alternative , Supabase is recommended.
 To use Supabase as your database, you will need to :
