@@ -95,6 +95,23 @@ Or Add an existing project by using :
 $ firebase use --add
 ```
 
+### `Supabase Integration (Opensource alternative to Firebase Firestore)`
+
+For an opensource alternative , Supabase is recommended.
+To use Supabase as your database, you will need to :
+
+- Set up a Supabase account and project at [Supabase](https://supabase.com).
+- Create a table for responses with the model in the route `expressEndpoints/models/responseModel.js`
+
+To set up Supabase JS client:
+
+```
+$ yarn add @supabase/supabase-js
+
+```
+
+- The project url and key can be found in the project setting of your supabase project
+
 ```
 $ cd preptime-api
 $ npm install -g yarn    // project uses yarn
@@ -115,7 +132,7 @@ $ yarn serve
 
 ## Deployment
 
-The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer.Cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project
+The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer.Cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project.
 
 Once a firebase project has been initialized use the follow command to deploy your function:
 
