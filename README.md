@@ -95,6 +95,12 @@ Or Add an existing project by using :
 $ firebase use --add
 ```
 
+```
+$ cd preptime-api
+$ npm install -g yarn    // project uses yarn
+$ yarn install        // or simply "yarn" if yarn is already installed
+```
+
 ### `Supabase Integration (Opensource alternative to Firebase Firestore)`
 
 For an opensource alternative , Supabase is recommended.
@@ -111,12 +117,6 @@ $ yarn add @supabase/supabase-js
 ```
 
 - The project url and key can be found in the project setting of your supabase project
-
-```
-$ cd preptime-api
-$ npm install -g yarn    // project uses yarn
-$ yarn install        // or simply "yarn" if yarn is already installed
-```
 
 You will then have to create your environment variables in a .env file with the following variables:
 
