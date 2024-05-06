@@ -112,6 +112,7 @@ These are the default credentials for supabase and should be changed as soon as 
 You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
 
 - Create a table for responses with the model in the route `expressEndpoints/models/responseModel.js`
+- Update the read and write policies for the responses table to allow aunauthenticated access to make it accessible to the public
 
 - For a managed supabase project hosted on supabase, the project URL and anon key can be found in the project setting of your supabase project.
 
