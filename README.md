@@ -111,7 +111,17 @@ These are the default credentials for supabase and should be changed as soon as 
 
 You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
 
-- Create a table for responses with the model in the route `expressEndpoints/models/responseModel.js`
+- Create a table for responses using the model :
+
+- Name - Type
+- sheet_id - uuid
+- title - varchar
+- created_at - timestamp
+- metaData - jsonb
+- dataMatrix - varchar
+- questions - jsonb
+- responses - jsonb
+
 - Update the read and write policies for the responses table to allow aunauthenticated access to make it accessible to the public
 
 - For a managed supabase project hosted on supabase, the project URL and anon key can be found in the project setting of your supabase project.
@@ -121,10 +131,6 @@ You can find guidelines on updating your .env file for optimal security [here](h
 To self host supabase on your local computer to make app accessible without internet access ,refer to the self hosting guide by supabase [here](https://supabase.com/docs/guides/self-hosting)
 
 You will then have to create your environment variables in a .env file with the following variables:
-
-- HUBSPOT_KEY - The API key to communicate with hubspot crm
-- HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
-- HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
 
 - SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
 - SUPABASE_KEY - The Anon key for authenticating requests to supabase.
