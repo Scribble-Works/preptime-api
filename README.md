@@ -111,7 +111,7 @@ These are the default credentials for supabase and should be changed as soon as 
 
 You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
 
-- Create a table for responses using the schema :
+- Create a table named `responses` using the schema :
   | Name | Type | Description |
   |------------|-------------|-------------|
   | sheet_id | uuid | Unique identifier for each response sheet. |
@@ -121,13 +121,11 @@ You can find guidelines on updating your .env file for optimal security [here](h
   | questions | jsonb | A JSONB field storing the questions associated with the response. |
   | responses | jsonb | A JSONB field storing the actual responses. |
 
-- Update the read and write policies for the responses table to allow aunauthenticated access to make it accessible to the public
+- Update the read and write policies for the `responses` table to allow aunauthenticated access to make it accessible to the public
 
 - For a managed supabase project hosted on supabase, the project URL and anon key can be found in the project setting of your supabase project.
 
 - For a local instance of supabase,the project URL will be hosted on `localhost:8000` and the anon key can be found in the .env file.It is recommended to update your anon key when deploying your supabase instance.
-
-To self host supabase on your local computer to make app accessible without internet access ,refer to the self hosting guide by supabase [here](https://supabase.com/docs/guides/self-hosting)
 
 You will then have to create your environment variables in a .env file with the following variables:
 
