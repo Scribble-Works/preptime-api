@@ -80,7 +80,8 @@ To setup supabase locally you will need to :
 
 - Install [Docker](https://www.docker.com/)
 
-After installing docker and making sure it is running follow these steps to start an instance of supabase locally.
+After installing docker and making sure it is running,follow these steps to start an instance of supabase locally.
+It is recommended to create this in a new project folder to isolate the environments of your database and backend(preptime-api) project folder
 
 ```
 git clone --depth 1 https://github.com/supabase/supabase
