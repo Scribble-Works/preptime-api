@@ -111,7 +111,7 @@ These are the default credentials for supabase and should be changed as soon as 
 
 You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
 
-- Create a table for responses using the model :
+- Create a table for responses using the schema :
 
   - Name - Type
   - sheet_id - uuid
