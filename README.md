@@ -113,8 +113,8 @@ You can find guidelines on updating your .env file for optimal security [here](h
 
 - Create a table for responses using the model :
 
-- Name - Type
-- sheet_id - uuid
+- - Name - Type
+- - sheet_id - uuid
 - title - varchar
 - created_at - timestamp
 - metaData - jsonb
