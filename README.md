@@ -114,14 +114,12 @@ You can find guidelines on updating your .env file for optimal security [here](h
 - Create a table for responses using the model :
 
   - Name - Type
-
-- - sheet_id - uuid
-- title - varchar
-- created_at - timestamp
-- metaData - jsonb
-- dataMatrix - varchar
-- questions - jsonb
-- responses - jsonb
+  - sheet_id - uuid
+  - created_at - timestamp
+  - metaData - jsonb
+  - dataMatrix - varchar
+  - questions - jsonb
+  - responses - jsonb
 
 - Update the read and write policies for the responses table to allow aunauthenticated access to make it accessible to the public
 
