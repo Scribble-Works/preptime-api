@@ -100,7 +100,7 @@ docker compose up -d
 
 ```
 
-Supbase dashboard can be accessed on port `8000`.Eg. (localhost:8000).
+Supbase dashboard can be accessed on port `8000`. Eg. (localhost:8000).
 
 You will be prompted for a username and password. By default, the credentials are:
 
