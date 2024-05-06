@@ -61,6 +61,7 @@ $ git clone https://github.com/Scribble-Works/preptime-api.git
 
 After git is done cloning the project repository, move into the project folder and install the dependencies:
 
+```
 $ cd preptime-api
 $ npm install -g yarn // project uses yarn
 $ yarn install // or simply "yarn" if yarn is already installed
@@ -140,4 +141,7 @@ See also the list of [contributors](https://github.com/Scribble-Works/preptime-a
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+
+```
+
 ```
