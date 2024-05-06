@@ -74,15 +74,41 @@ Supabase is used as the database for this project.
 To use Supabase as your database, you will need to :
 
 - Set up a Supabase account and project at [Supabase](https://supabase.com).
+
+To setup supabase locally you will need to
+-Install [Docker](https://www.docker.com/)
+
+After installing docker and making sure it is running follow these steps to start an instance of supabase locally.
+
+```
+git clone --depth 1 https://github.com/supabase/supabase
+
+# Go to the docker folder
+cd supabase/docker
+
+# Copy the fake env vars
+cp .env.example .env
+
+# Pull the latest images
+docker compose pull
+
+# Start the services (in detached mode)
+docker compose up -d
+
+```
+
+Supbase dashboard can be accessed on port `8000`.Eg. (localhost:8000).
+
+You will be prompted for a username and password. By default, the credentials are:
+
+- Username: supabase
+- Password: this_password_is_insecure_and_should_be_updated
+
+These are the default credentials for supabase and should be changed as soon as possible by changing their respective values in the .env file.
+
+You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
+
 - Create a table for responses with the model in the route `expressEndpoints/models/responseModel.js`
-
-To set up Supabase JS client:
-
-```
-
-$ yarn add @supabase/supabase-js
-
-```
 
 - The project url and key can be found in the project setting of your supabase project
 
