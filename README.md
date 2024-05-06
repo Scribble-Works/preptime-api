@@ -71,12 +71,14 @@ $ yarn install // or simply "yarn" if yarn is already installed
 ### Supabase Integration
 
 Supabase is used as the database for this project.
-To use Supabase as your database, you will need to :
+
+To use a managed supabase project hosted by supabase , you will need to :
 
 - Set up a Supabase account and project at [Supabase](https://supabase.com).
 
-To setup supabase locally you will need to
--Install [Docker](https://www.docker.com/)
+To setup supabase locally you will need to :
+
+- Install [Docker](https://www.docker.com/)
 
 After installing docker and making sure it is running follow these steps to start an instance of supabase locally.
 
@@ -110,7 +112,9 @@ You can find guidelines on updating your .env file for optimal security [here](h
 
 - Create a table for responses with the model in the route `expressEndpoints/models/responseModel.js`
 
-- The project url and key can be found in the project setting of your supabase project
+- For a managed supabase project hosted on supabase, the project URL and anon key can be found in the project setting of your supabase project.
+
+- For a local instance of supabase,the project URL will be hosted on `localhost:8000` and the anon key can be found in the .env file.It is recommended to update your anon key when deploying your supabase instance.
 
 To self host supabase on your local computer to make app accessible without internet access ,refer to the self hosting guide by supabase [here](https://supabase.com/docs/guides/self-hosting)
 
@@ -120,8 +124,8 @@ You will then have to create your environment variables in a .env file with the 
 - HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
 - HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
 
--SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
--SUPABASE_KEY - The Anon key for authenticating requests to supabase.
+- SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
+- SUPABASE_KEY - The Anon key for authenticating requests to supabase.
 
 Now start the development server with the following command:
 
