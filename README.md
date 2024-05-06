@@ -112,14 +112,14 @@ These are the default credentials for supabase and should be changed as soon as 
 You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
 
 - Create a table for responses using the schema :
-
-  - Name - Type
-  - sheet_id - uuid
-  - created_at - timestamp
-  - metaData - jsonb
-  - dataMatrix - varchar
-  - questions - jsonb
-  - responses - jsonb
+  | Name | Type | Description |
+  |------------|-------------|-------------|
+  | sheet_id | uuid | Unique identifier for each response sheet. |
+  | created_at | timestamp | The date and time when the response was created. |
+  | metaData | jsonb | A JSONB field storing metadata related to the response. |
+  | dataMatrix | varchar | String field used for storing matrix data related to the response. |
+  | questions | jsonb | A JSONB field storing the questions associated with the response. |
+  | responses | jsonb | A JSONB field storing the actual responses. |
 
 - Update the read and write policies for the responses table to allow aunauthenticated access to make it accessible to the public
 
