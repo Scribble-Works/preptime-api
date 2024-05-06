@@ -51,26 +51,6 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 $ node --version
 ```
 
-##### `Install Firebase CLI`
-
-The project uses firebase firestore as the database for storing all data and other relevant informations.
-
-Installation
-
-You can install the Firebase CLI using npm (the Node Package Manager). Note that you will need to install Node.js and npm. Installing Node.js should install npm as well.
-
-To download and install the Firebase CLI run the following command:
-
-To install yarn globally use:
-
-```
-$ npm install -g yarn //
-$ npm install -g firebase-tools //when using npm
-$ yarn global add firebase-tools //when using yarn
-```
-
-This will provide you with the globally accessible firebase command.
-
 ### Installation
 
 Now that you have installed the tools required to start the project locally, we provide a step by step series of examples that tell you how to get a development environment running. Before you can get the dev environment running, you need to download the project resources (files) from the github repository using git (which you installed earlier). To do this, you simply need to run the following command:
@@ -79,31 +59,17 @@ Now that you have installed the tools required to start the project locally, we 
 $ git clone https://github.com/Scribble-Works/preptime-api.git
 ```
 
-After git is done cloning the project repository, move into the project folder to initialize a firebase project by creating a new project or adding the app to an existing project and install the dependencies:
+After git is done cloning the project repository, move into the project folder and install the dependencies:
 
-Creating or adding a Firebase project
-
-Create a new firebase project with the following command:
-
-```
-$ firebase init //
-```
-
-Or Add an existing project by using :
-
-```
-$ firebase use --add
-```
-
-```
 $ cd preptime-api
-$ npm install -g yarn    // project uses yarn
-$ yarn install        // or simply "yarn" if yarn is already installed
+$ npm install -g yarn // project uses yarn
+$ yarn install // or simply "yarn" if yarn is already installed
+
 ```
 
-### Supabase Integration (Opensource alternative to Firebase Firestore)
+### Supabase Integration
 
-For an opensource alternative , Supabase is recommended.
+Supabase is used as the database for this project.
 To use Supabase as your database, you will need to :
 
 - Set up a Supabase account and project at [Supabase](https://supabase.com).
@@ -112,11 +78,14 @@ To use Supabase as your database, you will need to :
 To set up Supabase JS client:
 
 ```
+
 $ yarn add @supabase/supabase-js
 
 ```
 
 - The project url and key can be found in the project setting of your supabase project
+
+To self host supabase on your local computer to make app accessible without internet access ,refer to the self hosting guide by supabase [here](https://supabase.com/docs/guides/self-hosting)
 
 You will then have to create your environment variables in a .env file with the following variables:
 
@@ -124,10 +93,15 @@ You will then have to create your environment variables in a .env file with the 
 - HUBSPOT_FORMID - Form Id for contact us form created on hubspot crm linked to the contact us form on the front-end.
 - HUBSPOT_PORTALID - The unique key for your app created on hubspot crm
 
+-SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
+-SUPABASE_KEY - The Anon key for authenticating requests to supabase.
+
 Now start the development server with the following command:
 
 ```
+
 $ yarn serve
+
 ```
 
 ## Deployment
@@ -137,13 +111,15 @@ The original project is deployed and hosted on Firebase Cloud Functions. But dev
 Once a firebase project has been initialized use the follow command to deploy your function:
 
 ```
+
 $ yarn deploy
+
 ```
 
 ## Built With
 
 - [Express](https://expressjs.com/) - The backend framework used
-- [Firebase Firestore](https://firebase.google.com/docs/firestore/quickstart) - Database Management
+- [Supabase](https://supabase.com/database) - Database Management
 - [Firebase Cloud Functions](https://firebase.google.com/docs/functions) - Serverless hosting
 - [Yarn](https://yarnpkg.com/) - Dependencies and package management
 
@@ -164,3 +140,4 @@ See also the list of [contributors](https://github.com/Scribble-Works/preptime-a
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+```

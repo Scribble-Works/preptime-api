@@ -1,5 +1,4 @@
-const { json } = require("express");
-const { db } = require("../../firebase-config/index");
+const { supabase } = require("../../utils");
 
 class ResponseSchema {
   created_at;
@@ -36,21 +35,43 @@ class ResponseSchema {
     };
   }
   async create() {
-    const data = this.getResponse();
-    console.log("data", data);
-    const docRef = await db.collection("responses").add({
-      ...data,
-    });
-    return { ...data, _id: docRef.id };
+    const responseData = this.getResponse();
+    // console.log("data", data);
+    // const docRef = await db.collection("responses").add({
+    //   ...data,
+    // });
+    delete responseData.sheet_id;
+
+    const { data, error, status, statusText } = await supabase
+      .from("responses")
+      .insert([responseData])
+      .select("*");
+
+    console.log(`Status:${status},${statusText}`);
+    if (error) {
+      console.log(`Error creating instance :${error}`);
+      throw error;
+    }
+
+    const response = data[0];
+
+    console.log("data", response);
+    return { ...response, _id: response?.sheet_id };
   }
 
   static async findById(id) {
-    const docSnpashot = await db.collection("responses").doc(id).get();
-    const docData = docSnpashot.data();
-    const dataMatrix = JSON.parse(docData.dataMatrix);
+    const { data } = await supabase
+      .from("responses")
+      .select("*")
+      .eq("sheet_id", id);
+
+    // query will be first item in an array
+    const docData = data[0];
+
+    const dataMatrix = JSON.parse(docData?.dataMatrix);
     const res = {
       dataMatrix: dataMatrix,
-      _id: docSnpashot.id,
+      _id: docData?.sheet_id,
       ...docData,
     };
 
