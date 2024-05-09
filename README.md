@@ -51,49 +51,6 @@ For users on Windows, download and install the [Node.js](https://nodejs.org/en/d
 $ node --version
 ```
 
-##### `Install MongoDB`
-
-The project uses mongodb as the database for storing all data and other relevant informations. The community edition of mongodb is the prefered edition used in this project. For users on Mac, we can install mongodb using the Homebrew package manager as we did for the previous installations.
-
-Installing Mongodb on Mac:
-
-Tap the MongoDB Homebrew Tap to download the official Homebrew formula for MongoDB and the Database Tools, by running the following command in your macOS Terminal:
-
-```
-$ brew tap mongodb/brew
-```
-
-Update Homebrew and all existing formulae:
-
-```
-$ brew update
-```
-
-To install MongoDB, run the following command in your macOS Terminal application:
-
-```
-$ brew install mongodb-community@6.0
-```
-
-To run MongoDB (i.e. the mongod process) as a macOS service, run:
-
-```
-$ brew services start mongodb-community@6.0
-```
-
-To run MongoDB (i.e. the mongod process) manually as a background process, run:
-
-```
-$ mongod --config /usr/local/etc/mongod.conf --fork   //for MacOS running intel processor
-$ mongod --config /opt/homebrew/etc/mongod.conf --fork   // for MacOS running Apple M1 processor
-```
-
-Installation on Windows:
-
-Install MongoDB Community Edition on Windows using the default installation wizard. Download the MongoDB Community .msi installer from the following
-link: [MongoDB Download Center](https://www.mongodb.com/try/download/community?tck=docs_server). You can also follow the [documentation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) for a step by step guide on how to install MongoDB using the .msi installer
-on Windows. The .msi installer does not include mongosh. Follow the [mongosh installation instructions](https://www.mongodb.com/docs/mongodb-shell/install/) to download and install the shell separately.
-
 ### Installation
 
 Now that you have installed the tools required to start the project locally, we provide a step by step series of examples that tell you how to get a development environment running. Before you can get the dev environment running, you need to download the project resources (files) from the github repository using git (which you installed earlier). To do this, you simply need to run the following command:
@@ -106,32 +63,101 @@ After git is done cloning the project repository, move into the project folder a
 
 ```
 $ cd preptime-api
-$ npm install -g yarn    // project uses yarn
-$ yarn install        // or simply "yarn"
+$ npm install -g yarn // project uses yarn
+$ yarn install // or simply "yarn" if yarn is already installed
+
 ```
+
+### Supabase Integration
+
+Supabase is used as the database for this project.
+
+To use a managed supabase project hosted by supabase , you will need to :
+
+- Set up a Supabase account and project at [Supabase](https://supabase.com).
+
+To setup supabase locally you will need to :
+
+- Install [Docker](https://www.docker.com/)
+
+After installing docker and making sure it is running,follow these steps to start an instance of supabase locally.
+It is recommended to create this in a new project folder to isolate the environments of your database and backend(preptime-api) project folder
+
+```
+git clone --depth 1 https://github.com/supabase/supabase
+
+# Go to the docker folder
+cd supabase/docker
+
+# Copy the fake env vars
+cp .env.example .env
+
+# Pull the latest images
+docker compose pull
+
+# Start the services (in detached mode)
+docker compose up -d
+
+```
+
+Supbase dashboard can be accessed on port `8000`. Eg. (localhost:8000).
+
+You will be prompted for a username and password. By default, the credentials are:
+
+- Username: supabase
+- Password: this_password_is_insecure_and_should_be_updated
+
+These are the default credentials for supabase and should be changed as soon as possible by changing their respective values in the .env file.
+
+You can find guidelines on updating your .env file for optimal security [here](https://supabase.com/docs/guides/self-hosting/docker#dashboard-authentication)
+
+- Create a table named `responses` using the schema :
+  | Name | Type | Description |
+  |------------|-------------|-------------|
+  | sheet_id | uuid | Unique identifier for each response sheet. |
+  | created_at | timestamp | The date and time when the response was created. |
+  | metaData | jsonb | A JSONB field storing metadata related to the response. |
+  | dataMatrix | varchar | String field used for storing matrix data related to the response. |
+  | questions | jsonb | A JSONB field storing the questions associated with the response. |
+  | responses | jsonb | A JSONB field storing the actual responses. |
+
+- Update the read and write policies for the `responses` table to allow aunauthenticated access to make it accessible to the public
+
+- For a managed supabase project hosted on supabase, the project URL and anon key can be found in the project setting of your supabase project.
+
+- For a local instance of supabase,the project URL will be hosted on `localhost:8000` and the anon key can be found in the .env file.It is recommended to update your anon key when deploying your supabase instance.
 
 You will then have to create your environment variables in a .env file with the following variables:
 
-* PORT - port on which the server runs on. Default is port 5000.
-* DB_HOST - database hostname. Default is mongo_db (should be the same as the MongoDB service name in the docker-compose file)
-* DB_PORT - database port. Defaults to 27017.
-* DB_NAME - name of your database.
+- SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
+- SUPABASE_KEY - The Anon key for authenticating requests to supabase.
 
 Now start the development server with the following command:
 
 ```
-$ yarn dev
+
+$ yarn serve
+
 ```
 
 ## Deployment
 
-The original project is deployed and hosted on Amazon Web Service. But developers are encouraged to deploy or host it on any other service they prefer. The recommended method for building this project for production is by using Docker and docker-compose.
+The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer.Cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project.
+
+Once a firebase project has been initialized use the follow command to deploy your function:
+
+```
+
+$ yarn deploy
+
+```
 
 ## Built With
 
-* [Express](https://expressjs.com/) - The backend framework used
-* [MongoDB](https://www.mongodb.com/docs/manual/tutorial/getting-started/) - Database Management
-* [Yarn](https://yarnpkg.com/) - Dependencies and package management
+- [Express](https://expressjs.com/) - The backend framework used
+- [Supabase](https://supabase.com/database) - Database Management
+- [Firebase Cloud Functions](https://firebase.google.com/docs/functions) - Serverless hosting
+- [Yarn](https://yarnpkg.com/) - Dependencies and package management
 
 ## Contributing
 
@@ -139,14 +165,18 @@ Please read [CONTRIBUTING.md](https://github.com/Scribble-Works/preptime-api/blo
 
 ## Versioning
 
-We use [git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Scribble-Works/project/tags). 
+We use [git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Scribble-Works/project/tags).
 
 ## Authors
 
-* **Scribble Works** - *Initial work* - [Scribble Works](https://github.com/Scribble-Works)
+- **Scribble Works** - _Initial work_ - [Scribble Works](https://github.com/Scribble-Works)
 
 See also the list of [contributors](https://github.com/Scribble-Works/preptime-analytics/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the  GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+
+```
+
+```
