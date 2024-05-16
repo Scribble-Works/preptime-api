@@ -164,7 +164,3 @@ See also the list of [contributors](https://github.com/Scribble-Works/preptime-a
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
-
-```
-
-```
