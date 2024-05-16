@@ -1,4 +1,4 @@
-const { supabase } = require("../../utils");
+const { supabase } = require("../utils/index");
 
 class ResponseSchema {
   created_at;
