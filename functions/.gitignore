@@ -1,7 +1,0 @@
-node_modules/
-
-*firebase_admin_sdk.json
-
-*firebase-debug.*.log
-
-.env

@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   const { filename } = req.params;
   const filePath = path.join(
     process.cwd(),
-    `expressEndpoints/fileTemplates/${filename}`
+    `express/fileTemplates/${filename}`
   );
   console.log("file path", filePath);
   let stream = fs.createReadStream(filePath);

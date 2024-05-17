@@ -129,6 +129,7 @@ You can find guidelines on updating your .env file for optimal security [here](h
 
 You will then have to create your environment variables in a .env file with the following variables:
 
+- PORT - The port to be used by express.
 - SUPABASE_URL - The URL endpoint for your supabase project instance whether being hosted on the web or locally.
 - SUPABASE_KEY - The Anon key for authenticating requests to supabase.
 
@@ -136,19 +137,7 @@ Now start the development server with the following command:
 
 ```
 
-$ yarn serve
-
-```
-
-## Deployment
-
-The original project is deployed and hosted on Firebase Cloud Functions. But developers are encouraged to deploy or host it on any other service they prefer.Cloud functions are only available with the blaze plan on Firebase which requires addition of billing details to the project.
-
-Once a firebase project has been initialized use the follow command to deploy your function:
-
-```
-
-$ yarn deploy
+$ yarn dev
 
 ```
 
@@ -156,7 +145,6 @@ $ yarn deploy
 
 - [Express](https://expressjs.com/) - The backend framework used
 - [Supabase](https://supabase.com/database) - Database Management
-- [Firebase Cloud Functions](https://firebase.google.com/docs/functions) - Serverless hosting
 - [Yarn](https://yarnpkg.com/) - Dependencies and package management
 
 ## Contributing
@@ -176,7 +164,3 @@ See also the list of [contributors](https://github.com/Scribble-Works/preptime-a
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
-
-```
-
-```
