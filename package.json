@@ -1,6 +1,6 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
+  "name": "preptime-api",
+  "description": "Backend for Preptime Analytics",
   "scripts": {
     "dev": "nodemon express/index.js",
     "start": "npm run express/index.js"
@@ -8,7 +8,7 @@
   "engines": {
     "node": "18"
   },
-  "main": "/expreess/index.js",
+  "main": "/express/index.js",
   "dependencies": {
     "@supabase/supabase-js": "^2.42.5",
     "axios": "^1.4.0",
